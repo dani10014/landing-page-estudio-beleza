@@ -35,6 +35,9 @@
                 >
             </div>
         </div>
+        <div class="btn-agendar" data-aos="fade-up">
+            <button>Agendar</button>
+        </div>
     </section>
 </template>
 
@@ -128,6 +131,24 @@ const servicos = [
 
         &-principal {
             grid-row: 1 / 3;
+        }
+    }
+    .btn-agendar{
+        margin-top:2rem;
+        display: flex;
+        justify-content: center;
+        width:100%;
+        button{
+            background: #f7f8f5;
+            color:black;
+            border:1px solid black;
+            padding:0.7rem 1rem;
+            width:100%;
+            font-size:1rem;
+            cursor:pointer;
+            transition:all 0.3s ease-in-out;
+            border-radius:0.5rem;
+            @include variaveis.fonteBotoes;
         }
     }
 

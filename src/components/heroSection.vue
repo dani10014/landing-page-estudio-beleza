@@ -31,7 +31,7 @@
             position:absolute;
             height:100%;
             width:100%;
-            filter: brightness(0.3);
+            filter: brightness(0.5);
             img{
                 height:100%;
                 width:100%;
