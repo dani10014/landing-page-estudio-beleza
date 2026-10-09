@@ -64,7 +64,6 @@ const servicos = [
 .servicos {
     padding: 6rem variaveis.$margenSite;
     background: #f8f6f2;
-    color: #fff;
     background: #020208;
     background: linear-gradient(140deg, rgba(2, 2, 8, 1) 24%, rgba(184, 55, 0, 1) 91%);
     &_conteudo {
@@ -94,12 +93,18 @@ const servicos = [
         font-size: clamp(2.5rem, 8vw, 4rem);
         font-weight: 600;
         line-height: 1.1;
+        color: #fff;
+        margin-bottom: 1rem;
+        border-bottom: 1px solid #fff
     }
 
     &_lista {
+        display: flex;
+        flex-direction: column;
         margin: 0;
         padding: 0;
         list-style: none;
+        gap:10px;
     }
 
     &_item {
@@ -109,12 +114,16 @@ const servicos = [
         align-items: start;
         padding: 1.2rem 0;
         border-top: 1px solid #d9ded8;
+        background-color: #fff;
+        padding: variaveis.$margenSite;
+        border-radius: 10px;
 
         h3 {
             margin-bottom: 0.4rem;
             font-family: "Montserrat", sans-serif;
             font-size: 1rem;
             font-weight: 700;
+            
         }
 
         p {
@@ -122,6 +131,7 @@ const servicos = [
             font-family: "Montserrat", sans-serif;
             font-size: 0.9rem;
             line-height: 1.6;
+            color: black;
         }
     }
 
