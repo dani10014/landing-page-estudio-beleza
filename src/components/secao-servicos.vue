@@ -34,9 +34,9 @@
                     loading="lazy"
                 >
             </div>
-        </div>
-        <div class="btn-agendar" data-aos="fade-up">
-            <button>Agendar</button>
+            <div class="btn-agendar" data-aos="fade-up">
+                <button>Agendar</button>
+            </div>
         </div>
     </section>
 </template>
@@ -63,15 +63,24 @@ const servicos = [
 
 .servicos {
     padding: 6rem variaveis.$margenSite;
-    background: #f7f8f5;
+    background: #f8f6f2;
     color: #252b27;
-
     &_conteudo {
         display: grid;
         grid-template-columns: minmax(0, 1fr);
         gap: 3rem;
         max-width: 1160px;
         margin: 0 auto;
+        .btn-agendar{
+            margin-top:2rem;
+            display: flex;
+            justify-content: center;
+            width:100%;
+            button{
+                @include variaveis.estiloBotao;
+                @include variaveis.fonteBotoes;
+            }
+        }
     }
 
     &_texto {
@@ -126,29 +135,12 @@ const servicos = [
     &_foto {
         width: 100%;
         height: 100%;
+        border-radius:10px;
         min-height: 0;
         object-fit: cover;
 
         &-principal {
             grid-row: 1 / 3;
-        }
-    }
-    .btn-agendar{
-        margin-top:2rem;
-        display: flex;
-        justify-content: center;
-        width:100%;
-        button{
-            background: #f7f8f5;
-            color:black;
-            border:1px solid black;
-            padding:0.7rem 1rem;
-            width:100%;
-            font-size:1rem;
-            cursor:pointer;
-            transition:all 0.3s ease-in-out;
-            border-radius:0.5rem;
-            @include variaveis.fonteBotoes;
         }
     }
 

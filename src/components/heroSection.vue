@@ -8,7 +8,7 @@
             <h4 data-aos="fade-up">Espaço de beleza</h4>
             <p data-aos="fade-up">Bonito - MS  <i class="fa-solid fa-location-dot"></i></p>
             <div class="btn-agendar" data-aos="fade-up">
-                <button>Agendar</button>
+                <button>Agendar <i class="fa-solid fa-calendar-days"></i></button>
             </div>
         </div>
     </div>
@@ -71,15 +71,7 @@
             .btn-agendar{
                 margin-top:2rem;
                 button{
-                    background-color:#fff;
-                    color:black;
-                    border:1px solid white;
-                    padding:0.7rem 1rem;
-                    width:100%;
-                    font-size:1rem;
-                    cursor:pointer;
-                    transition:all 0.3s ease-in-out;
-                    border-radius:0.5rem;
+                    @include variaveis.estiloBotao;
                     @include variaveis.fonteBotoes;
                 }
             }
