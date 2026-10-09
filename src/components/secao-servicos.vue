@@ -62,10 +62,8 @@ const servicos = [
 @use "../component-scss/variaveis.scss";
 
 .servicos {
-    padding: 6rem variaveis.$margenSite;
-    background: #f8f6f2;
-    background: #020208;
-    background: linear-gradient(140deg, rgba(2, 2, 8, 1) 24%, rgba(184, 55, 0, 1) 91%);
+    padding: 2rem variaveis.$margenSite;
+
     &_conteudo {
         display: grid;
         grid-template-columns: minmax(0, 1fr);
@@ -94,8 +92,16 @@ const servicos = [
         font-weight: 600;
         line-height: 1.1;
         color: #fff;
-        margin-bottom: 1rem;
-        border-bottom: 1px solid #fff
+        margin-bottom: 2rem;
+
+        &::after {
+            display: block;
+            width: 3rem;
+            height: 3px;
+            margin-top: 0.85rem;
+            background: #b83700;
+            content: "";
+        }
     }
 
     &_lista {
@@ -104,7 +110,7 @@ const servicos = [
         margin: 0;
         padding: 0;
         list-style: none;
-        gap:10px;
+        gap: 0.75rem;
     }
 
     &_item {
@@ -112,26 +118,30 @@ const servicos = [
         grid-template-columns: minmax(0, 1fr);
         gap: 0.75rem;
         align-items: start;
-        padding: 1.2rem 0;
-        border-top: 1px solid #d9ded8;
-        background-color: #fff;
-        padding: variaveis.$margenSite;
-        border-radius: 10px;
+        padding: 1rem 1.2rem;
+        border-left: 3px solid #b83700;
+        border-radius: 6px;
+        background: #f8f6f2;
+        box-shadow: 0 5px 16px rgba(0, 0, 0, 0.16);
+        transition: transform 180ms ease, box-shadow 180ms ease;
+
+        &:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
 
         h3 {
             margin-bottom: 0.4rem;
             font-family: "Montserrat", sans-serif;
             font-size: 1rem;
             font-weight: 700;
-            
         }
 
         p {
-            color: #fff;
             font-family: "Montserrat", sans-serif;
             font-size: 0.9rem;
             line-height: 1.6;
-            color: black;
+            color: #45413e;
         }
     }
 
@@ -150,8 +160,7 @@ const servicos = [
         border-radius:10px;
         min-height: 0;
         object-fit: cover;
-        border:1px solid #fff;
-        box-shadow: 0px 0px 10px black;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.22);
 
         &-principal {
             grid-row: 1 / 3;
