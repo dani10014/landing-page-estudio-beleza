@@ -26,12 +26,11 @@ $margenSite:1rem;
 @mixin estiloBotao{
     background: #f7f8f5;
     color:black;
-    border:1px solid #5b5c5b;
     padding:0.7rem 1rem;
     width:100%;
     font-size:1rem;
     cursor:pointer;
     transition:all 0.3s ease-in-out;
     border-radius:0.5rem;
-
+    border:none;
 }

@@ -64,7 +64,9 @@ const servicos = [
 .servicos {
     padding: 6rem variaveis.$margenSite;
     background: #f8f6f2;
-    color: #252b27;
+    color: #fff;
+    background: #020208;
+    background: linear-gradient(140deg, rgba(2, 2, 8, 1) 24%, rgba(184, 55, 0, 1) 91%);
     &_conteudo {
         display: grid;
         grid-template-columns: minmax(0, 1fr);
@@ -116,7 +118,7 @@ const servicos = [
         }
 
         p {
-            color: #626a64;
+            color: #fff;
             font-family: "Montserrat", sans-serif;
             font-size: 0.9rem;
             line-height: 1.6;
@@ -138,6 +140,8 @@ const servicos = [
         border-radius:10px;
         min-height: 0;
         object-fit: cover;
+        border:1px solid #fff;
+        box-shadow: 0px 0px 10px black;
 
         &-principal {
             grid-row: 1 / 3;
