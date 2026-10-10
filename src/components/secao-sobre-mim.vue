@@ -1,8 +1,7 @@
 <template>
     <section>
     <div class="container-sobre">
-        <h2>Sobre mim</h2>
-        <div class="container-sobre_imagem-profissional">
+        <div class="container-sobre_imagem-profissional" data-aos="fade-up">
             <img src="../assets/IMG-20261008-WA0006.jpg">
         </div>
         <div class="container-sobre_nome-e-especializacao">
@@ -24,26 +23,17 @@
         flex-direction: column;
         height: 100vh;
         width:100%;
-        background: #f8f6f2;
         color: #252b27;
         position: relative;
         max-width: 1160px;
-        margin: 0 auto;
-        h2{
-            margin:2rem variaveis.$margenSite;
-            border-bottom: 1px solid #d9ded8;
-            font-family: "Playfair Display", serif;
-            font-size: clamp(2.5rem, 8vw, 4rem);
-            font-weight: 600;
-            line-height: 1.1;
-        }
+        margin: 5rem auto;
         &_imagem-profissional{
             display: flex;
             justify-content: center;
             width: 100%;
             height: 200px;
             position: absolute;
-            top: 100px;
+            top: 20px;
             img{
                 width: 50%;
                 height: 100%;
@@ -58,14 +48,22 @@
         &_nome-e-especializacao{
             display: flex;
             flex-direction: column;
-            height: 100%;
-            background-color: #f8f6f2;;
+            align-items: center;
+            height: 400px;
+            color: #fff;
+            background: #f8f6f2;
             margin-top: 10rem;
+            padding-top:5rem;
+            box-shadow: 0px 0px 5px black;
             margin:10rem variaveis.$margenSite;
             border-top-left-radius:10px ;
             border-top-right-radius:10px ;
             @media(min-width:750px){
                 height: 70%;
+            }
+            h2{
+                color: black;
+                @include variaveis.fonteTitulosPrincipais;
             }
         }
     }

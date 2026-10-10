@@ -35,7 +35,7 @@
                 >
             </div>
             <div class="btn-agendar" data-aos="fade-up">
-                <button>Agendar</button>
+                <button>Agendar <i class="fa-solid fa-calendar-days"></i></button>
             </div>
         </div>
     </section>
@@ -72,8 +72,7 @@ const servicos = [
         margin: 0 auto;
         .btn-agendar{
             margin-top:2rem;
-            display: flex;
-            justify-content: center;
+            
             width:100%;
             button{
                 @include variaveis.estiloBotao;

@@ -35,9 +35,9 @@
                 padding:30px 40px;
             }
             .logo{
-                width: 50px;
+                width: 40px;
                 height: 50px;
-                object-fit:scale-down;
+                object-fit:fill;
             }
             button{
                 background-color:transparent;
