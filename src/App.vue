@@ -1,7 +1,43 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
+import Hero from './components/hero.vue'
+import Header from "./components/components-fixed/header.vue"
 </script>
 
 <template>
-  <HelloWorld />
+  <div class="divisor-background">
+
+  </div>
+  <div class="landing-container">
+    <Header/>
+    <Hero/>
+  </div>
 </template>
+<style lang="scss">
+    *{
+      padding:0;
+      margin:0;
+      box-sizing: border-box;
+    }
+    body{
+      background-color: #675A4F;
+    }
+    .landing-container{
+      padding:2rem;
+      position: relative;
+      height: 100vh;
+    }
+    .divisor-background{
+        background-image: url("./assets/IMG-20261008-WA0011.jpg");
+        background-position: center;
+        background-size: cover;
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        bottom: 30px;
+        width: 50%;
+        z-index: -1;
+        -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%);
+        mask-image: linear-gradient(to left, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%);
+      }
+</style>
