@@ -4,7 +4,7 @@ import Header from "./components/components-fixed/header.vue"
 </script>
 
 <template>
-  <div class="divisor-background">
+  <div class="divisor-background" >
 
   </div>
   <div class="landing-container">

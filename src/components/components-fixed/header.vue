@@ -1,6 +1,6 @@
 <template>
     <header>
-        <div class="cabecalho">
+        <div class="cabecalho" data-aos="fade-up">
             <img src="../../assets/logo.png" class="cabecalho_logo">
             <div class="botoes-cabecalho">
                 <button v-for="botao in botoes" @click="categoriaEscolhida = botao" :class="{ativoBtn:categoriaEscolhida === botao}">
