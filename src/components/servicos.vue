@@ -63,6 +63,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        height: 100vh;
         .titulo{
             @include variaveis.fonteSubtilosImp;
             text-align: center;
@@ -74,7 +75,7 @@
         .container-servicos{
             display: flex;
             flex-direction: column;
-            height: 420px;
+            height: 100%;
             width: 100%;
             margin: variaveis.$espacamentoTextos-md 0;
             @media(min-width:750px){
@@ -165,6 +166,7 @@
                 align-items: center;
                 flex-direction: column;
                 width: 100%;
+                gap: 10px;
                 @media(min-width:750px){
                     width: 50%;
                     height: 100%;
@@ -172,6 +174,7 @@
                 button{
                     @include variaveis.botoesCta;
                     height: 100%;
+                    backdrop-filter: blur(1px);
                 }
                 .ativo{
                     opacity: 0.5;
