@@ -31,3 +31,18 @@ $corParagrafos:#D2C4BA;
     font-weight: 600;
     font-style: normal;
 }
+@mixin botoesCta{
+    padding: 1rem;
+    width: 100%;
+    border: none;
+    background: none;
+    border: 1px solid #fff;
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+    &:hover{
+        opacity: 0.5;
+        background-color: #fff;
+        color: black;
+    }
+}

@@ -49,13 +49,12 @@
             }
             button{
                 background-color: inherit;
-                border: none;
+                border: none !important;
                 color: #d6ccc2;
-                @include variaveis.fonteSubtilosImp;
-
+                @include variaveis.botoesCta;
             }
             .ativoBtn{
-                border-bottom: 1px solid #fff;
+                border-bottom: 1px solid #fff !important;
                 
             }
         }

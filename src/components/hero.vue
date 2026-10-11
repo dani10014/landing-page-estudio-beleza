@@ -4,7 +4,7 @@
             <h1 class="container-texto-hero_nome-salao">Liz Aquino</h1>
             <p class="container-texto-hero_servico">Espaço de beleza</p>
             <h3 class="container-texto-hero_texto-incentivo">Realçe toda a beleza que habita em você</h3>
-            <button class="btn-CTA">Agendar</button>
+            <button class="btn-CTA">Agendar <i class="fa-solid fa-calendar-days" id="icone-agendar"></i></button>
         </div>
     </section>
 </template>
@@ -17,7 +17,7 @@
 section{
     display: flex;
     justify-content: center;
-    height: 100%;
+    height: 100vh;
     
 }
 .container-texto-hero{
@@ -60,6 +60,9 @@ section{
             background-color: #fff;
             color: black;
 
+        }
+        #icone-agendar{
+            margin-left: 1rem;
         }
         @media(min-width:750px){
             width: 50%;

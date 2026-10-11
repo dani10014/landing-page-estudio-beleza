@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import Hero from './components/hero.vue'
 import Header from "./components/components-fixed/header.vue"
+import Servicos from "./components/servicos.vue";
 </script>
 
 <template>
@@ -10,6 +11,7 @@ import Header from "./components/components-fixed/header.vue"
   <div class="landing-container">
     <Header/>
     <Hero/>
+    <Servicos/>
   </div>
 </template>
 <style lang="scss">
