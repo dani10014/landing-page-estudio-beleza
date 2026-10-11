@@ -34,6 +34,7 @@
         background-color: inherit;
         justify-content: space-between;
         position: fixed;
+        z-index: 20;
         &_logo{
             width: 40px;
             object-fit: cover;
