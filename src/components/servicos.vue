@@ -63,7 +63,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        height: 100vh;
+        height: 600px;
         .titulo{
             @include variaveis.fonteSubtilosImp;
             text-align: center;
@@ -85,7 +85,8 @@
 
             &_container-fotos{
                 width: 100%;
-                height: 70%;
+                aspect-ratio: 4 / 3;
+                overflow: hidden;
                 position:relative;
                 &_descricao{
                     display: flex;
@@ -147,8 +148,12 @@
                 @media(min-width:750px){
                     width: 50%;
                     height: 100%;
+                    aspect-ratio: auto;
                 }
                 img{
+                    position: absolute;
+                    inset: 0;
+                    display: block;
                     width: 100%;
                     height: 100%;
                     -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%);
@@ -173,8 +178,12 @@
                 }
                 button{
                     @include variaveis.botoesCta;
-                    height: 100%;
+                    height: auto;
                     backdrop-filter: blur(1px);
+                    @media(min-width:750px){
+                        flex: 1;
+                        min-height: 0;
+                    }
                 }
                 .ativo{
                     opacity: 0.5;
