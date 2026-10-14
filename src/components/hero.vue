@@ -6,6 +6,7 @@
             <p class="container-texto-hero_localizacao"> Bonito - MS <i class="fa-solid fa-map"></i> </p>
             <h3 class="container-texto-hero_texto-incentivo">Realce o que te faz única</h3>
             <button class="btn-CTA" @click="redirecionar">Agendar <i class="fa-solid fa-calendar-days" id="icone-agendar"></i></button>
+            <p class="container-texto-hero_aviso-servico-ind">Atendimento individualizado com horário agendado.</p>
         </div>
     </section>
 </template>
@@ -78,6 +79,21 @@ section{
         }
         @media(min-width:750px){
             width: 50%;
+        }
+    }
+    &_aviso-servico-ind{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin:variaveis.$espacamentoTextos-md 0;
+        color: black;
+        font-size: 0.7rem;
+        background-color: #d6ccc2;
+        height:20px;
+        width: 90%;
+        border-radius: 10px;
+        @media(min-width:750px){
+            width: 30%;
         }
     }
 }
