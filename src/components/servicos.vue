@@ -39,7 +39,7 @@
 <script setup lang="ts">
     import {ref} from "vue";
 
-    const categorias = ["Sobrancelhas","Maquiagem","Henna",]
+    const categorias = ["Design sobrancelhas","Maquiagem social","Design com henna",]
     const categoriaAtiva = ref("Sobrancelhas")
 
 </script>
@@ -101,16 +101,16 @@
                     z-index: 10;
                     padding: 0.75rem 1rem 1rem;
                     color:#fff;
-                    background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.2));
+                    background: linear-gradient(to top, rgba(0,0,0,0.8) 10%, rgba(0,0,0,0.2));
                     backdrop-filter: brightness(0.7);
-                    -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%);
-                    mask-image: linear-gradient(to top, rgba(0,0,0,1) 100%, rgba(0,0,0,0) 100%);
+                    -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,1) 20%, rgba(0,0,0,0) 100%);
+                    mask-image: linear-gradient(to top, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%);
 
                     h6{
                         @include variaveis.fonteSubtilosImp;
                         font-size: 0.55rem;
                         letter-spacing: 0.15rem;
-                        margin-bottom: 0.2rem;
+                        margin-bottom: 0.5rem;
                     }
                     h4{
                         @include variaveis.fontesPrincipais;
@@ -130,13 +130,13 @@
                         padding: variaveis.$espacamentoTextos-sm;
 
                         h6{
-                            font-size: inherit;
-                            margin-bottom: 0;
+                            font-size: 0.7rem;
+                            margin-bottom: 0.5rem;
                         }
 
                         h4{
                             font-size: clamp(2rem, 2vw, 3rem);
-                            margin-bottom: 0;
+                            margin-bottom: 0.7rem;
                         }
 
                         p{

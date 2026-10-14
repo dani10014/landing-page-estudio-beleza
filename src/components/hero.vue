@@ -3,12 +3,17 @@
         <div class="container-texto-hero" data-aos="fade-up">
             <h1 class="container-texto-hero_nome-salao">Liz Aquino</h1>
             <p class="container-texto-hero_servico">Espaço de beleza</p>
-            <h3 class="container-texto-hero_texto-incentivo">Realçe toda a beleza que habita em você</h3>
-            <button class="btn-CTA">Agendar <i class="fa-solid fa-calendar-days" id="icone-agendar"></i></button>
+            <p class="container-texto-hero_localizacao"> Bonito - MS <i class="fa-solid fa-map"></i> </p>
+            <h3 class="container-texto-hero_texto-incentivo">Realce o que te faz única</h3>
+            <button class="btn-CTA" @click="redirecionar">Agendar <i class="fa-solid fa-calendar-days" id="icone-agendar"></i></button>
         </div>
     </section>
 </template>
 <script setup lang="ts">
+
+    const redirecionar = () =>{
+        window.open("https://wa.me/5567992417712?text=Olá!%20Gostaria%20de%20agendar%20um%20horário.")
+    }
 
 </script>
 <style lang="scss" scoped>
@@ -38,8 +43,15 @@ section{
     }
     &_servico{
         color:variaveis.$corParagrafos;
-        margin-bottom: variaveis.$espacamentoTextos-lg;
         @include variaveis.fonteSubtilosImp;
+    }
+    &_localizacao{
+        border-bottom: 1px solid #d6ccc2;
+        margin:variaveis.$espacamentoTextos-md 0;
+        color:#d6ccc2 ;
+        i{
+            margin-left: 0.5rem;
+        }
     }
     &_texto-incentivo{
         color: variaveis.$corParagrafos;
