@@ -3,17 +3,17 @@
         <h2 class="titulo">Serviços</h2>
         <div class="container-servicos" data-aos="fade-up">
             <div class="container-servicos_container-fotos">
-                <div v-if="categoriaAtiva === 'Sobrancelhas'"class="container-servicos_container-fotos_descricao">
+                <div v-if="categoriaAtiva === 'Design sobrancelhas'"class="container-servicos_container-fotos_descricao">
                     <h6>Especialidade</h6>
                     <h4>Sobrancelha</h4>
                     <p>Design personalizado que realça a simetria e a harmonia natural do seu olhar.</p>
                 </div>
-                <div v-if="categoriaAtiva === 'Maquiagem'"class="container-servicos_container-fotos_descricao">
+                <div v-if="categoriaAtiva === 'Maquiagem social'"class="container-servicos_container-fotos_descricao">
                     <h6>Especialidade</h6>
                     <h4>Sobrancelha</h4>
                     <p>Design personalizado que realça a simetria e a harmonia natural do seu olhar.</p>
                 </div>
-                <div v-if="categoriaAtiva === 'Henna'"class="container-servicos_container-fotos_descricao">
+                <div v-if="categoriaAtiva === 'Design com henna'"class="container-servicos_container-fotos_descricao">
                     <h6>Especialidade</h6>
                     <h4>Sobrancelha</h4>
                     <p>Design personalizado que realça a simetria e a harmonia natural do seu olhar.</p>
