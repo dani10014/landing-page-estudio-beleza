@@ -41,6 +41,7 @@ section{
     &_nome-salao{
         @include variaveis.fontesPrincipais;
         color: #d6ccc2;
+        text-shadow: 0 2px 4px black;
     }
     &_servico{
         color:variaveis.$corParagrafos;
@@ -58,6 +59,7 @@ section{
         color: variaveis.$corParagrafos;
         margin-bottom: variaveis.$espacamentoTextos-md;
         @include variaveis.fonteParagrafos;
+        color: #fff;
     }
     .btn-CTA{
         padding: variaveis.$espacamentoTextos-sm;
@@ -89,7 +91,7 @@ section{
         color: black;
         font-size: 0.7rem;
         background-color: #d6ccc2;
-        height:20px;
+        height:30px;
         width: 90%;
         border-radius: 10px;
         @media(min-width:750px){

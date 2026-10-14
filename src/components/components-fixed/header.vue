@@ -16,7 +16,7 @@
 <script setup lang="ts">
     import {ref} from "vue";
     
-    const botoes = ref(["Inicio","Serviços","Sobre","Local","Contato"])
+    const botoes = ref(["Início","Serviços","Sobre","Local","Contato"])
     const categoriaEscolhida = ref("Inicio")
     const menuAtivo = ref(false);
     
