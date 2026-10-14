@@ -19,13 +19,13 @@
                     <p>Design personalizado que realça a simetria e a harmonia natural do seu olhar.</p>
                 </div>
                 <Transition name="fade">
-                    <img src="../assets/IMG-20261008-WA0006.jpg" v-if="categoriaAtiva === 'Sobrancelhas'" id="foto-sonbrancelha" alt="Foto Design sobrancelha">
+                    <img src="../assets/IMG-20261008-WA0006.jpg" v-if="categoriaAtiva === 'Design sobrancelhas'" id="foto-sonbrancelha" alt="Foto Design sobrancelha">
                 </Transition>
                 <Transition name="fade">
-                    <img src="../assets/images.jpeg" v-if="categoriaAtiva === 'Maquiagem'" id="foto-sonbrancelha" alt="Foto Design Maquiagem">
+                    <img src="../assets/IMG-20261013-WA0004.jpg" v-if="categoriaAtiva === 'Maquiagem social'" id="foto-sonbrancelha" alt="Foto Design Maquiagem">
                 </Transition>
                 <Transition name="fade">
-                    <img src="../assets/henna.jpeg" v-if="categoriaAtiva === 'Henna'" id="foto-sonbrancelha" alt="Foto Design Henna">
+                    <img src="../assets/IMG-20261008-WA0003.jpg" v-if="categoriaAtiva === 'Design com henna'" id="foto-sonbrancelha" alt="Foto Design Henna">
                 </Transition>
             </div>
             <div class="container-servicos_container-botoes">
@@ -40,7 +40,7 @@
     import {ref} from "vue";
 
     const categorias = ["Design sobrancelhas","Maquiagem social","Design com henna",]
-    const categoriaAtiva = ref("Sobrancelhas")
+    const categoriaAtiva = ref("Design sobrancelhas")
 
 </script>
 <style lang="scss" scoped>
