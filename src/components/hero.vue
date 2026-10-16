@@ -1,5 +1,5 @@
 <template>
-    <section>
+    <section id="Início" class="secao-pagina">
         <div class="container-texto-hero" data-aos="fade-up">
             <h1 class="container-texto-hero_nome-salao">Liz Aquino</h1>
             <p class="container-texto-hero_servico">Espaço de beleza</p>
@@ -41,7 +41,6 @@ section{
     &_nome-salao{
         @include variaveis.fontesPrincipais;
         color: #d6ccc2;
-        text-shadow: 0 2px 4px black;
     }
     &_servico{
         color:variaveis.$corParagrafos;
@@ -57,7 +56,7 @@ section{
     }
     &_texto-incentivo{
         color: variaveis.$corParagrafos;
-        margin-bottom: variaveis.$espacamentoTextos-md;
+        margin-bottom: variaveis.$espacamentoTextos-sm;
         @include variaveis.fonteParagrafos;
         color: #fff;
     }
@@ -94,6 +93,9 @@ section{
         height:30px;
         width: 90%;
         border-radius: 10px;
+        background-color: variaveis.$corPadraoCorpo(40, 35, 33, 0.95) !important; // Podes trocar por red se quiseres testar o vermelho vivo
+        backdrop-filter: blur(8px);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
         @media(min-width:750px){
             width: 30%;
         }

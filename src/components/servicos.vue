@@ -1,47 +1,40 @@
 <template>
-    <section>
+    <section id="Serviços" class="secao-pagina">
         <h2 class="titulo">Serviços</h2>
         <div class="container-servicos" data-aos="fade-up">
             <div class="container-servicos_container-fotos">
-                <div v-if="categoriaAtiva === 'Design sobrancelhas'"class="container-servicos_container-fotos_descricao">
+                <div v-if="buscarSecao" class="container-servicos_container-fotos_descricao">
                     <h6>Especialidade</h6>
-                    <h4>Sobrancelha</h4>
-                    <p>Design personalizado que realça a simetria e a harmonia natural do seu olhar.</p>
+                    <h4>{{ buscarSecao.especialidade }}</h4>
+                    <p>{{ buscarSecao.subtitulo }}</p>
                 </div>
-                <div v-if="categoriaAtiva === 'Maquiagem social'"class="container-servicos_container-fotos_descricao">
-                    <h6>Especialidade</h6>
-                    <h4>Sobrancelha</h4>
-                    <p>Design personalizado que realça a simetria e a harmonia natural do seu olhar.</p>
-                </div>
-                <div v-if="categoriaAtiva === 'Design com henna'"class="container-servicos_container-fotos_descricao">
-                    <h6>Especialidade</h6>
-                    <h4>Sobrancelha</h4>
-                    <p>Design personalizado que realça a simetria e a harmonia natural do seu olhar.</p>
-                </div>
-                <Transition name="fade">
-                    <img src="../assets/IMG-20261008-WA0006.jpg" v-if="categoriaAtiva === 'Design sobrancelhas'" id="foto-sonbrancelha" alt="Foto Design sobrancelha">
-                </Transition>
-                <Transition name="fade">
-                    <img src="../assets/IMG-20261013-WA0004.jpg" v-if="categoriaAtiva === 'Maquiagem social'" id="foto-sonbrancelha" alt="Foto Design Maquiagem">
-                </Transition>
-                <Transition name="fade">
-                    <img src="../assets/IMG-20261008-WA0003.jpg" v-if="categoriaAtiva === 'Design com henna'" id="foto-sonbrancelha" alt="Foto Design Henna">
+                <Transition name="fade" v-for="secao in categorias">
+                    <img v-if="secao.especialidade === categoriaAtiva" :src="secao.imagem" id="foto-sonbrancelha" :alt="secao.alt">
                 </Transition>
             </div>
             <div class="container-servicos_container-botoes">
-                <button v-for="botao in categorias" @click="categoriaAtiva = botao" :class="{ativo:categoriaAtiva === botao}">
-                    {{ botao }}
+                <button v-for="botao in categorias" @click="categoriaAtiva = botao.especialidade" :class="{ativo:categoriaAtiva === botao.especialidade}">
+                    {{ botao.especialidade }}
                 </button>
             </div>
         </div>
     </section>
 </template>
 <script setup lang="ts">
-    import {ref} from "vue";
+    import {computed, ref} from "vue";
+    import imagemSobrancelha from "../assets/IMG-20261008-WA0006.jpg"
+    import imagemMaquiagem from "../assets/IMG-20261013-WA0004.jpg"
+    import imagemHenna from "../assets/IMG-20261008-WA0003.jpg"
 
-    const categorias = ["Design sobrancelhas","Maquiagem social","Design com henna",]
+    const categorias = [{especialidade:"Design sobrancelhas",subtitulo:"Valorize a sua beleza natural com traços precisos e harmoniosos.",imagem:imagemSobrancelha,alt:"Foto Design sobrancelha"},
+                        {especialidade:"Maquiagem social",subtitulo:"Técnicas profissionais e acabamento perfeito para te destacar.",imagem:imagemMaquiagem,alt:"Foto imagem Maquiagem"},
+                        {especialidade:"Design com henna",subtitulo:"Cor intensa e efeito harmônico que valoriza o formato do teu rosto.",imagem:imagemHenna,alt:"Foto design com com henna"}];
+
     const categoriaAtiva = ref("Design sobrancelhas")
-
+    
+    const buscarSecao = computed (()=>{
+        return categorias.find(secao => secao.especialidade === categoriaAtiva.value)
+    })
 </script>
 <style lang="scss" scoped>
 @use "./components-scss/variaveis" as variaveis;
@@ -101,7 +94,7 @@
                     z-index: 10;
                     padding: 0.75rem 1rem 1rem;
                     color:#fff;
-                    background: linear-gradient(to top, rgba(0,0,0,0.8) 10%, rgba(0,0,0,0.2));
+                    background: linear-gradient(to top, rgba(0,0,0,0.9) 20%, rgba(0,0,0,0.3)); /* Fundo escuro uniforme */
                     backdrop-filter: brightness(0.7);
                     -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,1) 20%, rgba(0,0,0,0) 100%);
                     mask-image: linear-gradient(to top, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%);

@@ -2,14 +2,24 @@
 import Hero from './components/hero.vue'
 import Header from "./components/components-fixed/header.vue"
 import Servicos from "./components/servicos.vue";
-</script>
+import menuHamburguer from './components/components-fixed/menu-hamburguer.vue';
+import {ref} from "vue";
 
+  const menuAtivo = ref(false);
+
+  const ativarMenu = ()=>{
+    menuAtivo.value = !menuAtivo.value
+  }
+</script>
 <template>
+  <Transition name="fade">
+      <menuHamburguer v-if="menuAtivo"/>
+  </Transition>
   <div class="divisor-background" >
 
   </div>
   <div class="landing-container">
-    <Header/>
+    <Header @menuFoiAtivo="ativarMenu"/>
     <Hero/>
     <Servicos/>
   </div>
@@ -22,6 +32,19 @@ import Servicos from "./components/servicos.vue";
     }
     body{
       background-color: #675A4F;
+    }
+    .fade-enter-active,
+    .fade-leave-active {
+        transition: opacity 0.4s ease, transform 0.4s ease;
+    }
+
+    .fade-enter-from {
+        opacity: 0;
+        transform: scale(1.02); /* Dá um zoom subtil ao entrar */
+    }
+
+    .fade-leave-to {
+        opacity: 0;
     }
     .landing-container{
       padding:2rem;
