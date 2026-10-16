@@ -18,7 +18,7 @@
     
     const headerMovido = ref(false);
 
-    const botoes = ref(["Início","Serviços","Sobre","Local","Contato"])
+    const botoes = ref(["Início","Serviços","Local","Sobre","Contato"])
     const categoriaEscolhida = ref("Início")
     const emitirAvisoMenu = defineEmits(["menuFoiAtivo"])
     const secaoAtiva = ref("inicio");

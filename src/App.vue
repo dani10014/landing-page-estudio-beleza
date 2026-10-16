@@ -3,6 +3,9 @@ import Hero from './components/hero.vue'
 import Header from "./components/components-fixed/header.vue"
 import Servicos from "./components/servicos.vue";
 import menuHamburguer from './components/components-fixed/menu-hamburguer.vue';
+import Local from "./components/local.vue";
+import btnFlutuante from "./components/components-fixed/btn-contato-flutuante.vue";
+
 import {ref} from "vue";
 
   const menuAtivo = ref(false);
@@ -20,8 +23,10 @@ import {ref} from "vue";
   </div>
   <div class="landing-container">
     <Header @menuFoiAtivo="ativarMenu"/>
+    <btnFlutuante/>
     <Hero/>
     <Servicos/>
+    <Local/>
   </div>
 </template>
 <style lang="scss">
