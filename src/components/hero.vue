@@ -33,6 +33,7 @@ section{
     align-items: center;
     text-align: center;
     width: 100%;
+    margin-top: variaveis.$espacamentoTextos-lg;
     @media(min-width:750px){
         text-align: start;
         max-width: 1062px;

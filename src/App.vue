@@ -13,16 +13,28 @@ import {ref} from "vue";
   const ativarMenu = ()=>{
     menuAtivo.value = !menuAtivo.value
   }
+
+  const secaoAtiva = ref("Início")
+
+  const btnMenuHambSecao = (secao:string) =>{
+    secaoAtiva.value = secao;
+    menuAtivo.value = false;
+  }
+  
+  const fecharMenu = () =>{
+    menuAtivo.value = false;
+  }
+
 </script>
 <template>
   <Transition name="fade">
-      <menuHamburguer v-if="menuAtivo"/>
+      <menuHamburguer v-if="menuAtivo" :secao-ativa="secaoAtiva" @btn-clicado="btnMenuHambSecao" @btn-fechar-menu="fecharMenu"/>
   </Transition>
   <div class="divisor-background" >
 
   </div>
   <div class="landing-container">
-    <Header @menuFoiAtivo="ativarMenu"/>
+    <Header @menuFoiAtivo="ativarMenu" @secao-alterada="secaoAtiva = $event" :secaoMenu="secaoAtiva"/>
     <btnFlutuante/>
     <Hero/>
     <Servicos/>
@@ -67,11 +79,12 @@ import {ref} from "vue";
         bottom: 30px;
         width: 100%;
         z-index: -1;
-        filter: brightness(0.5);
+        filter: brightness(0.3);
         -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%);
         mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%);
         @media(min-width:750px){
           width: 50%;
+          filter: brightness(0.5);
           -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%);
           mask-image: linear-gradient(to left, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%);
           filter: brightness(1);

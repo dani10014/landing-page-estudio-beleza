@@ -56,14 +56,18 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        height: 600px;
+        height: 100vh;
+        @media(min-width:750px){
+            height: 600px;
+            margin-bottom: 2rem;
+        }
         .titulo{
             @include variaveis.fonteSubtilosImp;
             text-align: center;
             margin: variaveis.$espacamentoTextos-lg;
             color: #fff;
             border-bottom: 1px solid variaveis.$corParagrafos;
-            
+            width:200px;
         }
         .container-servicos{
             display: flex;
@@ -78,9 +82,13 @@
 
             &_container-fotos{
                 width: 100%;
+                height: 50%;
                 aspect-ratio: 4 / 3;
                 overflow: hidden;
                 position:relative;
+                @media(min-width:750px){
+                    height: auto;
+                }
                 &_descricao{
                     display: flex;
                     justify-content: end;
@@ -164,6 +172,7 @@
                 align-items: center;
                 flex-direction: column;
                 width: 100%;
+                height: 50%;
                 gap: 10px;
                 @media(min-width:750px){
                     width: 50%;
@@ -171,11 +180,12 @@
                 }
                 button{
                     @include variaveis.botoesCta;
-                    height: auto;
+                    height: 100%;
                     backdrop-filter: blur(1px);
                     @media(min-width:750px){
                         flex: 1;
                         min-height: 0;
+                        height: auto;
                     }
                 }
                 .ativo{

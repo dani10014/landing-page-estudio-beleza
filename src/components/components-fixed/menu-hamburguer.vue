@@ -1,10 +1,10 @@
 <template>
     <div class="container-menu">
         <div class="container-menu_head">
-            <button>X</button>
+            <button class="btn-fechar-menu" @click="fecharMenu"><i class="fa-solid fa-xmark"></i></button>
         </div>
         <div class="container-menu_conteudo">
-            <button v-for="botao in botoes">
+            <button v-for="botao in botoes" @click="mudarSecao(botao)" :class="{ativo:props.secaoAtiva === botao}">
                 {{ botao }}
             </button>
         </div>
@@ -13,8 +13,16 @@
 <script setup lang="ts">
 import {ref} from "vue";
 
-    const botoes = ref(["Início","Serviços","Sobre","Local","Contato"])
-    const emitir = defineEmits(["btn-clicado"])
+    const botoes = ref(["Início","Serviços","Local","Sobre","Contato"])
+    const emitir = defineEmits(["btn-clicado","btn-fechar-menu"])
+    const props = defineProps<{ secaoAtiva: string }>()
+
+    const mudarSecao = (secao:string) =>{
+        emitir("btn-clicado",secao);
+    }
+    const fecharMenu = () =>{
+        emitir("btn-fechar-menu");
+    }
 </script>
 <style lang="scss" scoped>
 @use "../components-scss/variaveis.scss";
@@ -42,8 +50,15 @@ import {ref} from "vue";
             justify-content: flex-end;
             width: 100%;
             position: absolute;
-            top: 50px;
-            padding: 0 3rem;
+            top: 25px;
+            padding: 0 1.1rem;
+            .btn-fechar-menu{
+                padding: variaveis.$espacamentoTextos-sm;
+                border: none;
+                background-color: inherit;
+                color: #fff;
+                font-size: 2rem;
+            }
         }
         &_conteudo{
             display: flex;
@@ -56,10 +71,18 @@ import {ref} from "vue";
                 height: 100%;
                 width: 100%;
                 background: none;
+                color: #d6ccc2;
                 border: none;
-                border-bottom: 1px solid #D2C4BA;
-                color: #D2C4BA;
                 padding:2rem;
+                &:hover{
+                    opacity: 0.5;
+                    background-color: #fff;
+                    color: black;
+                }
+            }
+            .ativo{
+                border-bottom: 3px solid #fff !important ;
+                width: 50%;
             }
         }
     }

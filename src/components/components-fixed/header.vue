@@ -14,22 +14,33 @@
     </header>
 </template>
 <script setup lang="ts">
-    import {ref,onMounted, onUnmounted} from "vue";
+    import {ref,onMounted, onUnmounted, watch} from "vue";
     
     const headerMovido = ref(false);
 
     const botoes = ref(["Início","Serviços","Local","Sobre","Contato"])
     const categoriaEscolhida = ref("Início")
-    const emitirAvisoMenu = defineEmits(["menuFoiAtivo"])
-    const secaoAtiva = ref("inicio");
+    const emitirAvisoMenu = defineEmits(["menuFoiAtivo", "secao-alterada"])
 
     const ativarMenu = ()=>{
         emitirAvisoMenu("menuFoiAtivo");
     }
+
+    const props = defineProps({
+        secaoMenu: {
+            type: String,
+            required: true
+        }
+    })
     
+    watch(() => props.secaoMenu,(novoValor) =>{
+        if(novoValor !== categoriaEscolhida.value){
+            irSecao(novoValor)
+        }
+    })
+
     const irSecao = ((botao:string)=>{
         categoriaEscolhida.value = botao;
-        secaoAtiva.value = botao;
 
         const idSecao = botao;
         const elemento = document.getElementById(idSecao);
@@ -38,9 +49,10 @@
             elemento?.scrollIntoView({behavior:"smooth"});
         }
     })
+
     const verificaSecao = ()=>{
         const secoes = document.querySelectorAll(".secao-pagina") as NodeListOf<HTMLElement>;
-        const scrollPos = window.scrollY + 200;
+        const scrollPos = window.scrollY + 0;
 
         secoes.forEach((secao) =>{
             const topoSec = secao.offsetTop
@@ -52,7 +64,10 @@
                     const idBtn = btn
 
                     if(idBtn === id){
-                        categoriaEscolhida.value = id
+                        if(categoriaEscolhida.value !== id){
+                            categoriaEscolhida.value = id
+                            emitirAvisoMenu("secao-alterada", id)
+                        }
                     }
                 });
             }
