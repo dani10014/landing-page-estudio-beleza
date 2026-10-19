@@ -58,8 +58,7 @@
         justify-content: center;
         height: 100vh;
         @media(min-width:750px){
-            height: 600px;
-            margin-bottom: 2rem;
+            height: 600px; 
         }
         .titulo{
             @include variaveis.fonteSubtilosImp;

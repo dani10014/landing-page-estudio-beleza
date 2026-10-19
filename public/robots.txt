@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.laespacodebeleza.com.br/sitemap.xml
+
+# SEO / indexação
+Host: www.laespacodebeleza.com.br

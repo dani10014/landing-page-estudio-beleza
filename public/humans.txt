@@ -1,0 +1,12 @@
+# humanstxt.org
+
+/* TEAM */
+Owner: LA - Espaço de Beleza
+Site: https://www.laespacodebeleza.com.br
+Location: Bonito, Mato Grosso do Sul, Brasil
+
+/* THANKS */
+Agradecemos a comunidade de Bonito e todos os clientes que escolhem experiencias de beleza com acolhimento e cuidado.
+
+/* TECHNOLOGY */
+Vue 3, Vite, TypeScript, SCSS

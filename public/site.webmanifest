@@ -1,0 +1,18 @@
+{
+  "name": "LA - Espaço de Beleza",
+  "short_name": "LA Beleza",
+  "description": "Espaço de beleza em Bonito, Mato Grosso do Sul, com atendimento individual, acolhimento e bem-estar.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1d1714",
+  "theme_color": "#d8b998",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
