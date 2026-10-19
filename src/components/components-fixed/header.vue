@@ -52,26 +52,25 @@
 
     const verificaSecao = ()=>{
         const secoes = document.querySelectorAll(".secao-pagina") as NodeListOf<HTMLElement>;
-        const scrollPos = window.scrollY + 0;
+        const marcador = window.innerHeight * 0.35;
+        let secaoAtiva: HTMLElement | undefined;
 
         secoes.forEach((secao) =>{
-            const topoSec = secao.offsetTop
-            const altura = secao.offsetHeight;
-            const id = secao.getAttribute("id")
-
-            if(scrollPos >= topoSec && scrollPos < topoSec + altura){
-                botoes.value.forEach((btn:string) => {
-                    const idBtn = btn
-
-                    if(idBtn === id){
-                        if(categoriaEscolhida.value !== id){
-                            categoriaEscolhida.value = id
-                            emitirAvisoMenu("secao-alterada", id)
-                        }
-                    }
-                });
+            if(secao.getBoundingClientRect().top <= marcador){
+                secaoAtiva = secao;
             }
-        })
+        });
+
+        const chegouAoFim = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2;
+        if(chegouAoFim){
+            secaoAtiva = secoes[secoes.length - 1];
+        }
+
+        const id = secaoAtiva?.id;
+        if(id && botoes.value.includes(id) && categoriaEscolhida.value !== id){
+            categoriaEscolhida.value = id;
+            emitirAvisoMenu("secao-alterada", id);
+        }
 
     }
     const verificaScrol = (() =>{
@@ -136,9 +135,8 @@ header{
                 color: #d6ccc2;
                 @include variaveis.botoesCta;
             }
-            .ativoBtn{
+            button.ativoBtn{
                 border-bottom: 1px solid #fff !important;
-                
             }
         }
         .btn-hamburguer{

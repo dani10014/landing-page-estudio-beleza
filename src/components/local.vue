@@ -47,6 +47,11 @@ section{
     @media(min-width:750px){
         height: 700px;
     }
+    @media(max-width: 749px){
+        height: auto;
+        min-height: 100vh;
+        padding-bottom: 2rem;
+    }
     .titulo{
         @include variaveis.fonteSubtilosImp;
         text-align: center;
@@ -68,6 +73,8 @@ section{
         }
         @media(max-width: 749px){
             display: block;
+            flex: none;
+            min-height: auto;
             padding-bottom: 1rem;
         }
         &_div1{
@@ -86,7 +93,7 @@ section{
         }
         &_container-informacao{
             position: absolute;
-            z-index: 20;
+            z-index: 10;
             display: flex;
             justify-content: space-around;
             width: 100%;
@@ -139,6 +146,7 @@ section{
                 }
                 h6{
                     text-align: center;
+                    @include variaveis.fonteParagrafos;
                 }
                 .subtitulo{
                     font-size: 0.5rem;

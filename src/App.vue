@@ -4,6 +4,8 @@ import Header from "./components/components-fixed/header.vue"
 import Servicos from "./components/servicos.vue";
 import menuHamburguer from './components/components-fixed/menu-hamburguer.vue';
 import Local from "./components/local.vue";
+import Sobre from "./components/sobre.vue";
+import Contato from "./components/contato.vue";
 import btnFlutuante from "./components/components-fixed/btn-contato-flutuante.vue";
 
 import {ref} from "vue";
@@ -39,6 +41,8 @@ import {ref} from "vue";
     <Hero/>
     <Servicos/>
     <Local/>
+    <Sobre/>
+    <Contato/>
   </div>
 </template>
 <style lang="scss">
