@@ -28,7 +28,7 @@
                     <h6>Rua Santo Antônio,862</h6>
                 </div>
                 <div class="card">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d807.5963355722566!2d-56.491258!3d-21.129848!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x947c58d50c8407c7%3A0x4de9a9fbc7e1ac30!2sBonito%20-%20MS%2C%20Brasil!5e0!3m2!1spt-BR!2spy!4v1792274692496!5m2!1spt-BR!2spy" width="100%" height="100%" style="border:0;" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2795.9345985319474!2d-56.4921397261068!3d-21.13440527693868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x947c5f3c126604bf%3A0x2422d8ac30d99c0e!2sR.%20Santo%20Ant%C3%B4nio%2C%20862%20-%20Atl%C3%A2ntico%2C%20Bonito%20-%20MS%2C%2079290-000%2C%20Brasil!5e1!3m2!1spt-BR!2spy!4v1792592359185!5m2!1spt-BR!2spy" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
                 </div>
             </div>
         </div>
@@ -98,7 +98,7 @@ section{
             display: flex;
             justify-content: space-around;
             width: 100%;
-            height: 200px;
+            height: 230px;
             gap: 10px;
             bottom:10px;
             border-top-left-radius:10px;
@@ -153,9 +153,9 @@ section{
                     font-weight: 700;
                 }
                 .subtitulo{
-                    font-size: 0.5rem;
+                    font-size: 0.7rem;
                     @include variaveis.fonteSubtilosImp;
-                    margin-bottom: 1rem;
+                    margin-bottom: 1.5rem;
                     text-align: center;
                 }
                 iframe{

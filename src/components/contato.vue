@@ -3,7 +3,7 @@
         <div class="contato_conteudo" data-aos="fade-up">
             <p class="contato_chamada">Vamos conversar?</p>
             <h2 class="contato_titulo">Contato</h2>
-            <p class="contato_descricao">Escolha seu canal preferido para falar com a gente.</p>
+            <p class="contato_descricao">Escolha seu canal preferido para falar comigo</p>
             <div class="contato_cards">
                 <a
                     class="contato_card contato_card-whatsapp"
