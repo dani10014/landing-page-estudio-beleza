@@ -6,7 +6,7 @@
                 <img src="../assets/IMG-20261008-WA0018.jpg">
             </div>
             <div class="container-local_div1">
-                <img src="../assets/IMG-20261008-WA0011.jpg">
+                <img src="../assets/IMG-20261019-WA0006.jpg">
             </div>
             <div class="container-local_container-informacao">
                 <div class="card">
@@ -25,6 +25,7 @@
                     </svg>
                     <h4>Local</h4>
                     <p class="subtitulo"> * Bonito Ms</p>
+                    <h6>Rua Santo Antônio,862</h6>
                 </div>
                 <div class="card">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d807.5963355722566!2d-56.491258!3d-21.129848!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x947c58d50c8407c7%3A0x4de9a9fbc7e1ac30!2sBonito%20-%20MS%2C%20Brasil!5e0!3m2!1spt-BR!2spy!4v1792274692496!5m2!1spt-BR!2spy" width="100%" height="100%" style="border:0;" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
@@ -133,6 +134,7 @@ section{
                     transform: translateY(-4px) scale(1.02);
                     box-shadow: 0 16px 28px rgba(0, 0, 0, 0.22);
                     filter: brightness(1.05);
+                    border: 1px solid #fff;
                 }
                 svg{
                     margin-bottom: variaveis.$espacamentoTextos-sm;
@@ -147,6 +149,8 @@ section{
                 h6{
                     text-align: center;
                     @include variaveis.fonteParagrafos;
+                    font-size: 0.8rem;
+                    font-weight: 700;
                 }
                 .subtitulo{
                     font-size: 0.5rem;
