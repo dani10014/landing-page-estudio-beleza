@@ -28,7 +28,7 @@
                     <h6>Rua Santo Antônio,862</h6>
                 </div>
                 <div class="card">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2795.9345985319474!2d-56.4921397261068!3d-21.13440527693868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x947c5f3c126604bf%3A0x2422d8ac30d99c0e!2sR.%20Santo%20Ant%C3%B4nio%2C%20862%20-%20Atl%C3%A2ntico%2C%20Bonito%20-%20MS%2C%2079290-000%2C%20Brasil!5e1!3m2!1spt-BR!2spy!4v1792592359185!5m2!1spt-BR!2spy" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2795.9345985319474!2d-56.4921397261068!3d-21.13440527693868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x947c5f3c126604bf%3A0x2422d8ac30d99c0e!2sR.%20Santo%20Ant%C3%B4nio%2C%20862%20-%20Atl%C3%A2ntico%2C%20Bonito%20-%20MS%2C%2079290-000%2C%20Brasil!5e1!3m2!1spt-BR!2spy!4v1792592359185!5m2!1spt-BR!2spy" width="100%" height="100%" style="border:0;" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
                 </div>
             </div>
         </div>
