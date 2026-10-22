@@ -7,6 +7,7 @@ import Local from "./components/local.vue";
 import Sobre from "./components/sobre.vue";
 import Contato from "./components/contato.vue";
 import btnFlutuante from "./components/components-fixed/btn-contato-flutuante.vue";
+import { Analytics } from "@vercel/analytics/next"
 
 import {ref} from "vue";
 
