@@ -7,7 +7,7 @@ import Local from "./components/local.vue";
 import Sobre from "./components/sobre.vue";
 import Contato from "./components/contato.vue";
 import btnFlutuante from "./components/components-fixed/btn-contato-flutuante.vue";
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from '@vercel/analytics/vue';
 
 import {ref} from "vue";
 
@@ -18,6 +18,7 @@ import {ref} from "vue";
   }
 
   const secaoAtiva = ref("Início")
+  const anoAtual = new Date().getFullYear()
 
   const btnMenuHambSecao = (secao:string) =>{
     secaoAtiva.value = secao;
@@ -30,6 +31,7 @@ import {ref} from "vue";
 
 </script>
 <template>
+  <Analytics/>
   <Transition name="fade">
       <menuHamburguer v-if="menuAtivo" :secao-ativa="secaoAtiva" @btn-clicado="btnMenuHambSecao" @btn-fechar-menu="fecharMenu"/>
   </Transition>
@@ -44,6 +46,9 @@ import {ref} from "vue";
     <Local/>
     <Sobre/>
     <Contato/>
+    <footer class="rodape">
+      <p>© {{ anoAtual }} Liz Aquino. Todos os direitos reservados.</p>
+    </footer>
   </div>
 </template>
 <style lang="scss">
@@ -71,7 +76,14 @@ import {ref} from "vue";
     .landing-container{
       padding:2rem;
       position: relative;
-      height: 100vh;
+      min-height: 100vh;
+    }
+    .rodape{
+      padding: 1.5rem 0 0.5rem;
+      border-top: 1px solid rgba(214, 204, 194, 0.35);
+      color: #d6ccc2;
+      font-size: 0.8rem;
+      text-align: center;
     }
     .divisor-background{
         background-image: url("./assets/IMG-20261008-WA0011.jpg");
