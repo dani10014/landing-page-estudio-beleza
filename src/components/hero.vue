@@ -13,7 +13,7 @@
 <script setup lang="ts">
 
     const redirecionar = () =>{
-        window.open("https://wa.me/5567992417712?text=Olá!%20Gostaria%20de%20agendar%20um%20horário.")
+        window.open("https://wa.me/5567991352516?text=Olá!%20Gostaria%20de%20agendar%20um%20horário.")
     }
 
 </script>

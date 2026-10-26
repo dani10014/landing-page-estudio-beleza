@@ -7,7 +7,7 @@
             <div class="contato_cards">
                 <a
                     class="contato_card contato_card-whatsapp"
-                    href="https://wa.me/5567992417712?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio."
+                    href="https://wa.me/5567991352516?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio."
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Entre em contato pelo WhatsApp"
