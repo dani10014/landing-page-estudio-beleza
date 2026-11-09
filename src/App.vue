@@ -96,7 +96,7 @@ import {ref} from "vue";
         bottom: 30px;
         width: 100%;
         z-index: -1;
-        filter: brightness(0.3);
+        filter: brightness(0.5);
         -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%);
         mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%);
         @media(min-width:750px){
