@@ -117,12 +117,12 @@ section{
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                color: #f7f1ea;
+                color: #2f2922;
                 border-radius: 12px;
                 margin:0 variaveis.$espacamentoTextos-sm;
                 padding: 0.8rem;
                 transition: all 0.3s ease-in-out;
-                background: linear-gradient(135deg, rgba(118, 98, 82, 0.92), rgba(169, 141, 110, 0.88));
+                background: variaveis.$corPaleta2;
                 border: 1px solid rgba(255, 255, 255, 0.18);
                 box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
                 @media(max-width: 749px){

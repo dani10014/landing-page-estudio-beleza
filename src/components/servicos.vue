@@ -180,7 +180,17 @@
                 button{
                     @include variaveis.botoesCta;
                     height: 100%;
+                    background-color: variaveis.$corPaleta1;
+                    border-color: variaveis.$corPaleta1;
+                    color: #2f2922;
                     backdrop-filter: blur(1px);
+                    &:hover{
+                        background-color: variaveis.$corPaleta2;
+                        border-color: variaveis.$corPaleta2;
+                        color: #2f2922;
+                        opacity: 1;
+                        border:1px solid black;
+                    }
                     @media(min-width:750px){
                         flex: 1;
                         min-height: 0;
@@ -188,9 +198,10 @@
                     }
                 }
                 .ativo{
-                    opacity: 0.5;
-                    background-color: #fff;
-                    color: black;
+                    background-color: variaveis.$corPaleta2;
+                    border-color: variaveis.$corPaleta2;
+                    color: #2f2922;
+                    border:1px solid black;
                 }
             }
         }
