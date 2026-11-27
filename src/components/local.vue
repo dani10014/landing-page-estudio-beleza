@@ -3,10 +3,10 @@
         <h2 class="titulo">Local</h2>
         <div class="container-local">
             <div class="container-local_div1">
-                <img src="../assets/IMG-20261008-WA0018.jpg">
+                <img src="../assets/IMG-20261008-WA0018.jpg" alt="Salão La Espaço de Beleza - Cadeira de atendimento">
             </div>
             <div class="container-local_div1">
-                <img src="../assets/IMG-20261019-WA0006.jpg">
+                <img src="../assets/IMG-20261019-WA0006.jpg" alt="Salão La Espaço de Beleza - Espelho do Salão">
             </div>
             <div class="container-local_container-informacao">
                 <div class="card">
